@@ -5,7 +5,7 @@ export const mockSongs = [
     artist: "Queen",
     album: "A Night at the Opera",
     duration: "5:55",
-    cover: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop"
+    cover: "https://res.cloudinary.com/dust9ohqt/image/upload/v1751064177/foto1_pscmxv.jpg"
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const mockSongs = [
     artist: "Led Zeppelin",
     album: "Led Zeppelin IV",
     duration: "8:02",
-    cover: "https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=300&h=300&fit=crop"
+    cover: "https://res.cloudinary.com/dust9ohqt/image/upload/v1751064177/foto2_kbjjz6.jpg"
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const mockSongs = [
     artist: "Eagles",
     album: "Hotel California",
     duration: "6:30",
-    cover: "https://images.unsplash.com/photo-1520637836862-4d197d17c392?w=300&h=300&fit=crop"
+    cover: "https://res.cloudinary.com/dust9ohqt/image/upload/v1751064178/foto3_rtdkwn.jpg"
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ export const mockSongs = [
     artist: "John Lennon",
     album: "Imagine",
     duration: "3:07",
-    cover: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=300&h=300&fit=crop"
+    cover: "https://res.cloudinary.com/dust9ohqt/image/upload/v1751064177/foto4_qi0n20.jpg"
   },
   {
     id: 5,
@@ -37,6 +37,6 @@ export const mockSongs = [
     artist: "Michael Jackson",
     album: "Thriller",
     duration: "4:54",
-    cover: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=300&h=300&fit=crop"
+    cover: "https://res.cloudinary.com/dust9ohqt/image/upload/v1751064433/foto6_zi89gy.jpg"
   }
 ];
