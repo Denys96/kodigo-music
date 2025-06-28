@@ -1,12 +1,22 @@
-import { Home, Search, Music, User, X } from 'lucide-react';
+import { Home, Search, Music, User, X, LogOut } from 'lucide-react';
+import { auth } from '../firebase';
 
-const Sidebar = ({ isOpen, toggleSidebar, currentRoute, navigate }) => {
+const Sidebar = ({ isOpen, toggleSidebar, currentRoute, navigate, user }) => {
   const navItems = [
     { id: 'home', label: 'Inicio', icon: Home },
     { id: 'search', label: 'Buscar', icon: Search },
     { id: 'library', label: 'Tu Biblioteca', icon: Music },
     { id: 'profile', label: 'Perfil', icon: User }
   ];
+
+  const handleLogout = async () => {
+    try {
+      await auth.signOut();
+      navigate('login');
+    } catch (error) {
+      console.error('Error al cerrar sesión:', error);
+    }
+  };
 
   return (
     <>
@@ -32,6 +42,20 @@ const Sidebar = ({ isOpen, toggleSidebar, currentRoute, navigate }) => {
           </button>
         </div>
 
+        {user && (
+          <div className="flex items-center gap-3 mb-6 p-3 rounded-lg bg-gray-800">
+            <img 
+              src={user.photoURL || 'https://i.pravatar.cc/40'} 
+              alt="User" 
+              className="w-10 h-10 rounded-full"
+            />
+            <div>
+              <p className="text-white font-medium">{user.displayName || 'Usuario'}</p>
+              <p className="text-gray-400 text-xs">{user.email}</p>
+            </div>
+          </div>
+        )}
+
         <nav className="space-y-4">
           {navItems.map(item => {
             const Icon = item.icon;
@@ -52,6 +76,16 @@ const Sidebar = ({ isOpen, toggleSidebar, currentRoute, navigate }) => {
             );
           })}
         </nav>
+
+        {user && (
+          <button
+            onClick={handleLogout}
+            className="w-full flex items-center gap-3 p-3 rounded-lg hover:bg-gray-800 mt-6"
+          >
+            <LogOut size={20} />
+            <span>Cerrar sesión</span>
+          </button>
+        )}
       </div>
     </>
   );
