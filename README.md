@@ -1,12 +1,21 @@
-# React + Vite
+🚀 Proyecto: Kodigo Music SPA
+Este proyecto consiste en una Single Page Application (SPA) moderna y responsiva, desarrollada con ReactJS, inspirada en plataformas líderes de música digital como Spotify, Deezer y Apple Music. Incluye diseño atractivo, rutas dinámicas y componentes reutilizables, ideal para practicar conceptos avanzados de desarrollo frontend.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🧠 Lo que aprendí:
+Creación de una SPA utilizando ReactJS y sus componentes funcionales
 
-Currently, two official plugins are available:
+Configuración de React Router DOM para manejar múltiples rutas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Uso de styled-components para diseñar interfaces responsivas y personalizadas
 
-## Expanding the ESLint configuration
+Implementación de formularios validados manualmente con React Hook Form
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Modularización del código para mantener un proyecto escalable y ordenado
+
+Aplicación de buenas prácticas en estructura de carpetas y organización del proyecto
+
+🌐 Enlace al proyecto:
+🔗 Ver proyecto en Vercel <!-- O tu link de deploy -->
+
+📸 Captura del proyecto:
+<p align="center"> <img src="screenshot-home.png" alt="Home Kodigo Music" width="300"/> <img src="screenshot-library.png" alt="Library Kodigo Music" width="300"/> </p> <p align="center"> <img src="screenshot-login.png" alt="Login Kodigo Music" width="300"/> <img src="screenshot-responsive.png" alt="Vista Responsive" width="300"/> </p>
