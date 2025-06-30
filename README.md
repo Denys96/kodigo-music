@@ -14,4 +14,6 @@ Este proyecto consiste en una **Single Page Application (SPA) moderna y responsi
 [🔗 Ver proyecto en Vercel](https://kodigo-music-omega.vercel.app/login)
 
 ### 📸 Captura del proyecto:
-<p align="center"> <img src="screenshot-home.png" alt="Home Kodigo Music" width="300"/> <img src="screenshot-library.png" alt="Library Kodigo Music" width="300"/> </p> <p align="center"> <img src="screenshot-login.png" alt="Login Kodigo Music" width="300"/> <img src="screenshot-responsive.png" alt="Vista Responsive" width="300"/> </p>
+<p align="center"> <img src="997shots_so.png" alt="Home Kodigo Music" width="300"/> <img src="126shots_so.png" alt="Library Kodigo Music" width="300"/> </p> 
+
+<p align="center"> <img src="689shots_so.png" alt="Login Kodigo Music" width="300"/> <img src="150shots_so.png" alt="Vista Responsive" width="300"/> </p>

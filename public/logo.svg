@@ -1,0 +1,6 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Nota musical -->
+  <path d="M44 10V38.5C42.2 37.5 40 37 38 37C32.5 37 28 41 28 46C28 51 32.5 55 38 55C43.5 55 48 51 48 46V20L60 16V10L44 14.5V10Z" fill="#1DB954"></path>
+  <!-- Onda de sonido -->
+  <path d="M10 24C12.5 24 15 27 15 32C15 37 12.5 40 10 40M18 20C21.5 20 25 26 25 32C25 38 21.5 44 18 44M6 28C7.5 28 9 30 9 32C9 34 7.5 36 6 36" stroke="#ffffff" strokewidth="2" strokelinecap="round" strokelinejoin="round"></path>
+</svg>
