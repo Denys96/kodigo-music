@@ -12,6 +12,7 @@ import { Menu } from 'lucide-react';
 import { auth } from './firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import LoadingSpinner from './components/LoadingSpinner.jsx';
+import Footer from './components/Footer.jsx'; // ✅ Importa Footer
 
 const App = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -19,15 +20,12 @@ const App = () => {
   const router = useRouter();
   const [user, loading] = useAuthState(auth);
 
-  // Efecto para manejar redirecciones basadas en autenticación
   useEffect(() => {
-    if (loading) return; // Espera a que termine la verificación
+    if (loading) return;
 
     if (!user && router.currentRoute !== 'login') {
-      // Redirigir a login si no está autenticado
       router.navigate('login');
     } else if (user && router.currentRoute === 'login') {
-      // Si está autenticado y trata de acceder a login, redirigir a home
       router.navigate('home');
     }
   }, [user, loading, router.currentRoute]);
@@ -36,13 +34,10 @@ const App = () => {
 
   const renderCurrentPage = () => {
     if (loading) return <LoadingSpinner />;
-
-    // Si no hay usuario, solo permitir la página de login
     if (!user) {
       return router.currentRoute === 'login' ? <LoginPage /> : <LoadingSpinner />;
     }
 
-    // Rutas protegidas (requieren autenticación)
     switch (router.currentRoute) {
       case 'home':
         return <HomePage musicPlayer={musicPlayer} />;
@@ -58,10 +53,9 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      {/* Mostrar layout completo solo para usuarios autenticados */}
+    <div className="min-h-screen bg-gray-900 text-white flex flex-col">
       {user ? (
-        <div className="flex">
+        <div className="flex flex-1">
           <Sidebar
             isOpen={sidebarOpen}
             toggleSidebar={toggleSidebar}
@@ -69,8 +63,8 @@ const App = () => {
             navigate={router.navigate}
             user={user}
           />
-          
-          <div className="flex-1 lg:ml-0">
+
+          <div className="flex-1 lg:ml-0 flex flex-col">
             {/* Header móvil */}
             <header className="lg:hidden bg-gray-800 p-4 flex items-center justify-between">
               <button onClick={toggleSidebar} className="text-white">
@@ -81,18 +75,16 @@ const App = () => {
               </h1>
               <div className="w-6" />
             </header>
-            
-            <main className="p-6 pb-32 lg:pb-24">
+
+            <main className="flex-grow p-6 pb-32 lg:pb-24">
               {renderCurrentPage()}
             </main>
           </div>
         </div>
       ) : (
-        // Páginas no autenticadas (solo login)
         renderCurrentPage()
       )}
-      
-      {/* Reproductor solo para usuarios autenticados */}
+
       {user && (
         <MusicPlayer
           currentSong={musicPlayer.currentSong}
@@ -100,6 +92,8 @@ const App = () => {
           playPause={musicPlayer.playPause}
         />
       )}
+
+      <Footer />
     </div>
   );
 };
